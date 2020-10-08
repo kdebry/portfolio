@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% load static %}
+
+
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+	<div class="fade">
+		<p>	Scroll down i will become invisible</p>
+	</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static "js/script.js" %}"></script>
+{% endblock %}
+
