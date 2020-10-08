@@ -1,21 +1,13 @@
 {% extends "base.html" %} 
 {% load static %}
 
-
-
-{% block css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-{% endblock %}
-
 {% block page_content %}
-
-	<div class="fade">
-		<p>	Scroll down i will become invisible</p>
-	</div>
-
+       
+<main role="main" class="inner cover">
+	<h1 class="cover-heading">Hi I'm Kevin</h1>
+	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ante posuere, gravida dolor sed, imperdiet dolor. Curabitur interdum velit nec tortor condimentum tempor. Phasellus ullamcorper sem vel faucibus tincidunt. Etiam consequat libero augue, a faucibus nunc lacinia vitae. Quisque at nibh vulputate, volutpat diam et, interdum purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae dolor mattis, dignissim sapien a, convallis orci. Donec id nisi ac lectus varius condimentum nec a nibh. Aliquam et ornare nisl. Sed vitae risus maximus, gravida magna non, mattis risus. Aenean elementum molestie tellus sed lacinia. Nam finibus magna nec convallis feugiat. </p>
+	<p class="lead">
+		<a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+	</p>
+</main>
 {% endblock %}
-
-{% block js %}
-<script src="{% static "js/script.js" %}"></script>
-{% endblock %}
-
