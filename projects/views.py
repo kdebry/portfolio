@@ -3,6 +3,9 @@ from projects.models import Project
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html', {})
+
 def project_index(request):
     projects = Project.objects.all()
     context = {
