@@ -1,10 +1,20 @@
 {% extends "base.html" %} 
+{% load static %}
 
 {% block page_content %}
-<div class="container mt-5">
+
+<canvas id="particule"></canvas>
+
+<div class="container mt-5" id="particles-js">
   <main role="main">
-    <h2>Hi I'm Kevin</h2>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ante posuere, gravida dolor sed, imperdiet dolor. Curabitur interdum velit nec tortor condimentum tempor. Phasellus ullamcorper sem vel faucibus tincidunt.</p>
+    <h1>Hi! I'm X</h1><h2>I am a developer</h2>
+    <p class="lead mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ante posuere, gravida dolor sed, imperdiet dolor. Curabitur interdum velit nec tortor condimentum tempor. Phasellus ullamcorper sem vel faucibus tincidunt.</p>
   </main>
 </div>
-    {% endblock %}
+{% endblock %}
+
+{% block js %}
+<script src="{% static "./js/particles.js" %}"></script>
+<script src="{% static "./js/app.js" %}"></script>
+<script src="{% static "./js/script.js" %}"></script>
+{% endblock %}
