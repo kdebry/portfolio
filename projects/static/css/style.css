@@ -19,6 +19,6 @@
     box-shadow: 0 2px 2px -2px rgba(0,0,0,0.8);
 }
 
-h1, h2, .lead{
+h1, h2, h3, .lead{
     text-shadow: 1px 1px rgba(0,0,0,.2);
 }

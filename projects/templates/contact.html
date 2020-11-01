@@ -9,14 +9,20 @@
 	<p>Interested in hiring me for your project or just want to say hi? You can fill in the contact form below</p>
 	<p>Want to get connected? Follow me on the social channels below.</p>
 	<ul class="list-inline mb-0">
-	  <li class="list-inline-item mb-3"><a class="linkedin" href="#"><i class="fab fa-linkedin-in fa-fw fa-lg"></i></a></li>
-	  <li class="list-inline-item mb-3"><a class="github" href="#"><i class="fab fa-github-alt fa-fw fa-lg"></i></a></li
+	  <li class="list-inline-item mb-3"><a class="btn btn-social-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+	  <li class="list-inline-item mb-3"><a class="btn btn-social-icon btn-github" href="#"><i class="fa fa-github"></i></a></li>
 	</ul><!--//social-list-->
       </div><!--//container-->
     </div>  
   </section>
 
-  <section class="contact-section px-3 py-5 p-md-2">
+  {% if messages %}
+    {% for message in messages %}
+    <script>alert('{{ message }}');</script>
+    {% endfor %}
+  {% endif %}
+
+  <section class="contact-section px-3 py-5 p-md-1">
     <div class="container">
       <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" action="">
 	{% csrf_token %}
@@ -42,4 +48,5 @@
     </div><!--//container-->
   </section>
 </div>
+
 {% endblock %}

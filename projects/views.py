@@ -3,6 +3,7 @@ from projects.models import Project
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from projects.forms import ContactForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -14,7 +15,6 @@ def contact(request):
         form = ContactForm()
     else:
         form = ContactForm(request.POST)
-        print(form)
         if form.is_valid():
             subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
@@ -22,8 +22,13 @@ def contact(request):
             try:
                 send_mail(subject, message, from_email, ['admin@example.com'])
             except BadHeaderError:
-                return HttpResponse('Invalid header found.') 
-    return render(request, "contact.html", {'form': form})
+                return HttpResponse('Invalid header found.')
+        messages.info(request, 'Message has been sent!')
+        return HttpResponseRedirect('')
+    context = {
+        'form': form
+    }
+    return render(request, "contact.html", context)
 
 
 def project_index(request):
