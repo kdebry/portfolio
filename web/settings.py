@@ -119,3 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Mail
+
+DEFAULT_FROM_EMAIL = 'kevin.debry@skynet.be'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
