@@ -1,2 +1,5 @@
+*.pyc
 projects/__pycache__/
 web/__pycache__/
+venv/
+*.env
