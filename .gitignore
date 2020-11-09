@@ -1,5 +1,6 @@
 *.pyc
 projects/__pycache__/
+projects/migrations/__pycache__/
 web/__pycache__/
 venv/
 *.env
